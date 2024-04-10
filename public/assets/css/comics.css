@@ -1,0 +1,163 @@
+.comics-container {
+  margin: auto;
+  width: 80%;
+}
+
+.comics-header {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.comics-header h1 {
+  font-size: 35px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-family: var(--font-sen);
+}
+
+.comics-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.comic {
+  width: calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 350px;
+  border: 3px solid var(--red);
+  transition: all 0.3s;
+  position: relative;
+  margin-top: 40px;
+  border-radius: 5px;
+}
+
+.comic img {
+  width: 95%;
+  height: 230px;
+  object-fit: contain;
+  background-color: var(--red);
+  position: absolute;
+  top: -20px;
+  border-radius: 5px;
+}
+
+.comic .comic-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 130px;
+  background-color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.comic-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.comic-links a {
+  padding: 10px 20px;
+  border: 1px solid var(--red);
+  background-color: transparent;
+  color: var(--red);
+  text-decoration: none;
+  font-family: var(--font-poppins);
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.comic-links a:hover {
+  background-color: var(--red-hover);
+  color: var(--white);
+}
+
+.comic .comic-info h3 {
+  color: var(--white);
+  font-size: 14px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pagination-comics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#pagination-comics button {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: var(--red);
+  border: 2px solid var(--red);
+  cursor: pointer;
+  font-family: var(--font-poppins);
+  border-radius: 5px;
+}
+
+#pagination-comics button:hover {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+#pagination-comics button.active {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+@media (max-width: 1000px) {
+  .comic {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 880px) {
+  .comics-body {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .comic {
+    width: calc(100% - 20px);
+  }
+
+  .comic-links {
+    width: 100%;
+    padding-inline: 30px;
+    margin-top: 10px;
+  }
+
+  .comic-links a {
+    width: 100%;
+  }
+
+  #pagination-comics {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 400px) {
+  .comics-container {
+    width: 90%;
+  }
+}

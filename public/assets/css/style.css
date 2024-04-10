@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sen";
+  src: url("../fonts/sen.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Francis One";
+  src: url("../fonts/francis_one.ttf") format("truetype");
+}
+
+:root {
+  --dark: #0a0f11;
+  --dark-grey: #12191c;
+  --red: #ec1d24;
+  --red-hover: #c4171d;
+  --white: #fff;
+  --light-grey: #f5f5f5;
+  --grey: #ddd;
+  --font-poppins: "Poppins", sans-serif;
+  --font-sen: "Sen", sans-serif;
+  --font-francis-one: "Francis One", sans-serif;
+}
+
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--dark);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--red);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--red-hover);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: var(--red-hover);
+}
+
+body {
+  background-color: var(--dark);
+  position: relative;
+  overflow-x: hidden;
+}
+
+body.active {
+  overflow: hidden;
+}
