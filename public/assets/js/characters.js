@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const url = "https://marvel-project.zeabur.app";
+  const url = "http://localhost/marvel-project-dev";
   const pagination = document.getElementById("pagination");
   const buttonsPagination = document.querySelectorAll(".pagination button");
 
